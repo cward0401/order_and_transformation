@@ -1,5 +1,19 @@
-__pycache__/ 
-*.pyc 
-.ipynb_checkpoints/ 
-.env 
-.DS_Store 
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Anaconda / env
+env/
+venv/
+*.conda
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
