@@ -4,6 +4,30 @@ from pathlib import Path
 from typing import Iterable
 import numpy as np
 
+"""
+"The sun was just down and to the west lay reefs of bloodred clouds
+up out of which rose little desert nighthawks like fugutives from 
+some great fire at the earth's end."
+
+- Cormac McCarthy, Blood Meridian
+
+
+Utilities
+=========
+
+This module holds the small structural tools that keep the rest of the codebase
+clean: output paths, scaling functions, vector normaliztion, rolling windows— 
+albeit the kind of window which roll here are not highly recommended by Numpy,
+and simle export helpers.
+
+These functions are not the central objects of study. They are the instruments,
+measuring rods, hinges, clamps, and quiet servants that allow the larger field
+machinery to move without clutter.
+
+"""
+
+
+
 def ensure_output_dirs(base: str = "outputs") -> dict[str, Path]:
     base_path = Path(base)
     figures = base_path / "figures"
