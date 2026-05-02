@@ -3,7 +3,28 @@ from __future__ import annotations
 import numpy as np
 from scipy.spatial.distance import pdist, squareform
 from scipy.linalg import eigh
+"""
+"All night the sheetlightning quaked sourceless to the west 
+beyond the midnight thunderheads, making a bluish day of the 
+distant desert, the mountains on the sudden skyline stark and 
+black and livid like a land of some other order out there whose
+true geology was not stone but fear."
 
+- Cormac McCarthy, Blood Meridian
+
+
+Geometry
+========
+This module translates field histories and time series into inspectable 
+state-space forms.
+
+Geometry is used here as an interesting point of view: a way to take
+high-dimensional system behavior and render its relations as 
+distance, embedding, trajectory, and position. 
+
+Geometry is lawful 'seeing'.
+
+"""
 def delay_embedding(series: np.ndarray, dim: int = 3, tau: int = 2) -> np.ndarray:      # This is for a 1D time series the delay embedding  constructs points
     series = np.asarray(series, dtype=float)                                            # whose coordinates are lagged versions of the same series
     n = len(series) - (dim -1) * tau                                                    # computes how many complete lagged vectors one can make without running off the end
